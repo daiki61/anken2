@@ -15,8 +15,10 @@
             <div class="header-utilities">
               <div class="header__logo">
                 <a class="page__button" href="/">Atte</a>
+              </div>
               <nav>
                 <ul class="header-nav">
+                   
                     <li class="header-nav__item">
                         <a class="home__button" href="/login">ホーム</a>
                     </li>
@@ -29,15 +31,19 @@
                 </ul>
                 <ul class="header-nav">
                     <li class="header-nav__item">
-                        <a class="logout__button" href="/register">ログアウト</a>
-                    </li>
+                        <form class="form" action="/logout" method="POST">
+                           @csrf 
+                           <a class="logout__button" href="/login">ログアウト</a>
+                        </form>                       
+                    </li>   
                 </ul>
                </nav>
             </div>
         </div>
     </header>
     <main>
-        @yield('content')
+     @yield('content')
+
     </main>
 </body>
 </html>

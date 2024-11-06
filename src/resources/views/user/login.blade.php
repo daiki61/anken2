@@ -9,7 +9,8 @@
     <div class="login-form__heading">
         <h2>ログイン</h2>
     </div>
-    <form class="form">
+    <form class="form" action="/login" method="post">
+      @csrf
         <div class="form__group">
             <div class="form__group-title">
                 <span class="form__label--item">メールアドレス</span>
@@ -41,10 +42,10 @@
       </div>
     </div>
 <div class="form__button">
-    <button class="form__button-submit" type="submit">ログイン</button>
+    <button class="form__button-submit" type="submit" href="/login">ログイン</button>
 </div>
   </form>
-  <h3>アカウントをお持ちでない方はこちらから</h3>
+  <p>アカウントをお持ちでない方はこちらから</p>
   <div class="register__link">
     　<a class="register__button-submit" href="/register">会員登録</a>
 　</div>

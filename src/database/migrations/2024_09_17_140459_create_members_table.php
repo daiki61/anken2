@@ -3,6 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
+use Illuminate\Http\Request;
 
 class CreateMembersTable extends Migration
 {
@@ -17,7 +19,7 @@ class CreateMembersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->string('tel');
+            $table->string('tel')->nullable();
             $table->string('password');
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
